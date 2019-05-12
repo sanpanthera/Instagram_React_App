@@ -12,7 +12,7 @@ const Posts = (props) => {
                 </p>
             </figcaption>
             <div className="button-container">
-                <button className="remove-button" onClick={() => {
+                <button className="removeButton" onClick={() => {
                     props.onRemovePhoto(post)
                 }}>Remove</button>
             </div>
