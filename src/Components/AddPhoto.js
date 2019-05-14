@@ -1,36 +1,35 @@
-import React, {Component} from 'react';
-import Title from './Title';
+import React, { Component } from 'react';
 
 class AddPhoto extends Component {
 
-  submitPost = event =>
-  {
+  submitPost = event => {
     event.preventDefault();
     const link = event.target.link.value;
     const description = event.target.description.value;
-    if(link && description) {
-      const post= {
-        id:Number(new Date()),
-        description: description,
-        imageLink: link
-      };
-       this.props.onAddPost(post);
+    const post = {
+      id: Number(new Date()),
+      description: description,
+      imageLink: link
+    };
+
+    if (link && description) {
+       this.props.addPost(post);
+       this.props.history.push('/');
     }
   }
 
   render() {
-      return (
-        <React.Fragment>
-          <Title title={'Photowall'} />
-          <div className="form">
-                <form onSubmit={this.submitPost}>
-                   <input type="text" placeholder="Link" name="link"/>
-                   <input type="text" placeholder="Description" name="description"/>
-                   <button>Post</button>
-                </form>
-          </div>
-        </React.Fragment>
-      )
+    return (
+      <React.Fragment>
+        <div className="form">
+          <form onSubmit={this.submitPost}>
+            <input type="text" placeholder="Link" name="link" />
+            <input type="text" placeholder="Description" name="description" />
+            <button>Post</button>
+          </form>
+        </div>
+      </React.Fragment>
+    )
   }
 }
 
