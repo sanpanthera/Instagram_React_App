@@ -1,18 +1,14 @@
+
 import Main from './Main';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import * as actions from '../Redux/Actions';
+import * as actions from '../redux/actions';
+import {withRouter} from 'react-router';
 
-function mapStateToProps (state) {
-    return {
-        posts: state
-    }
-}
+const mapStateToProps = state => ( { posts: state.posts, comments: state.comments } );
 
-function mapDispatchToMap(dispatch){
-  return  bindActionCreators(actions,dispatch);
-}
+const mapDispatchToProps = dispatch => bindActionCreators(actions, dispatch);
 
-const App = connect(mapStateToProps,mapDispatchToMap)(Main);
+const App = withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));
 
 export default App;

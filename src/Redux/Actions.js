@@ -1,14 +1,19 @@
+//remove
 
-export function removePost(index){
-    return {
-        type:"REMOVE_POST",
-        index
-    }
-}
+export const removePost = index => ({ 
+    type: 'REMOVE_POST',
+    index 
+});
 
-export function addPost(post){
-    return {
-        type:"ADD_POST",
-        post
-    }
-}
+
+//adding post
+export const addPost = post =>({
+    type: 'ADD_POST',
+    post
+});
+
+export const addComment = (comment, postId) =>({
+    type: 'ADD_COMMENT',
+    comment,
+    postId
+});

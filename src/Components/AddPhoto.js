@@ -1,36 +1,32 @@
 import React, { Component } from 'react';
 
 class AddPhoto extends Component {
-
-  submitPost = event => {
-    event.preventDefault();
-    const link = event.target.link.value;
-    const description = event.target.description.value;
-    const post = {
-      id: Number(new Date()),
-      description: description,
-      imageLink: link
-    };
-
-    if (link && description) {
-       this.props.addPost(post);
-       this.props.history.push('/');
+    handleSubmit = event => {
+        event.preventDefault();
+        const imageLink = event.target.elements.link.value;
+        const description = event.target.elements.description.value;
+        const post = {
+            id: Number(new Date()),
+            description: description,
+            imageLink: imageLink
+        };
+        if (description && imageLink) {
+            this.props.addPost(post);
+            this.props.onHistory.push('/');
+        }
     }
-  }
 
-  render() {
-    return (
-      <React.Fragment>
-        <div className="form">
-          <form onSubmit={this.submitPost}>
-            <input type="text" placeholder="Link" name="link" />
-            <input type="text" placeholder="Description" name="description" />
-            <button>Post</button>
-          </form>
-        </div>
-      </React.Fragment>
-    )
-  }
+    render() {
+        return (
+            <div className="form">
+                <form onSubmit={this.handleSubmit}>
+                    <input type="text" placeholder="Link" name="link" />
+                    <input type="text" placeholder="Desciption" name="description" />
+                    <button> Post </button>
+                </form>
+            </div>
+        )
+    }
 }
 
-export default AddPhoto;
+export default AddPhoto
