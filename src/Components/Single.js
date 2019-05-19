@@ -10,10 +10,18 @@ class Single extends Component {
         const comments = this.props.comments[match.params.id] || [];
         const index = this.props.posts.findIndex((post) => post.id === id);
 
+        if(this.props.loading){
+            return <div className="loader">Loading...</div>
+        }
+        else if(post){
         return <div className='single-photo'>
             <Photo post={post} {...this.props} index={index} />
-            <Comments addComment={this.props.addComment} comments={comments} id={id} />
+            <Comments addComment={this.props.startSavingComments} comments={comments} id={id} />
         </div>
+        }
+        else{
+            return <h1>No Post Found</h1>
+        }
     }
 }
 

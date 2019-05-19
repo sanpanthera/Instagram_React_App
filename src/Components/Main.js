@@ -6,11 +6,21 @@ import Single from './Single';
 
 class Main extends Component {
 
+    state = {loading:true}
+
+    componentDidMount()
+    {
+        this.props.startLoadingPost().then(()=>{
+            this.setState({loading:false});
+        });
+        this.props.startLoadingComments();
+    }
+
     render() {
         return (
             <div>
                 <h1>
-                    <Link to="/"> Photowall </Link>
+                    <Link to="/"> Picture Album </Link>
                 </h1>
                 <Route exact path="/" render={() => (
                     <div>
@@ -23,7 +33,7 @@ class Main extends Component {
                 )} />
 
                 <Route path="/single/:id" render={(params) => (
-                    <Single  {...this.props} {...params} />
+                    <Single loading={this.state.loading} {...this.props} {...params} />
                 )} />
             </div>
         )
