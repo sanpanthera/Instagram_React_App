@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/picAlbum/static/css/main.48990820.chunk.css",
-    "main.js": "/picAlbum/static/js/main.586bbe22.chunk.js",
-    "main.js.map": "/picAlbum/static/js/main.586bbe22.chunk.js.map",
-    "runtime~main.js": "/picAlbum/static/js/runtime~main.89dc6e04.js",
-    "runtime~main.js.map": "/picAlbum/static/js/runtime~main.89dc6e04.js.map",
-    "static/js/2.7029a9be.chunk.js": "/picAlbum/static/js/2.7029a9be.chunk.js",
-    "static/js/2.7029a9be.chunk.js.map": "/picAlbum/static/js/2.7029a9be.chunk.js.map",
-    "index.html": "/picAlbum/index.html",
-    "precache-manifest.443115ac3c48202cd533e49c9bb73dd1.js": "/picAlbum/precache-manifest.443115ac3c48202cd533e49c9bb73dd1.js",
-    "service-worker.js": "/picAlbum/service-worker.js",
-    "static/css/main.48990820.chunk.css.map": "/picAlbum/static/css/main.48990820.chunk.css.map"
+    "main.css": "/PictureAlbum/static/css/main.48990820.chunk.css",
+    "main.js": "/PictureAlbum/static/js/main.586bbe22.chunk.js",
+    "main.js.map": "/PictureAlbum/static/js/main.586bbe22.chunk.js.map",
+    "runtime~main.js": "/PictureAlbum/static/js/runtime~main.ac99c62a.js",
+    "runtime~main.js.map": "/PictureAlbum/static/js/runtime~main.ac99c62a.js.map",
+    "static/js/2.e85b31f8.chunk.js": "/PictureAlbum/static/js/2.e85b31f8.chunk.js",
+    "static/js/2.e85b31f8.chunk.js.map": "/PictureAlbum/static/js/2.e85b31f8.chunk.js.map",
+    "index.html": "/PictureAlbum/index.html",
+    "precache-manifest.58d25a36ff5f57d88830fdba55cb1da8.js": "/PictureAlbum/precache-manifest.58d25a36ff5f57d88830fdba55cb1da8.js",
+    "service-worker.js": "/PictureAlbum/service-worker.js",
+    "static/css/main.48990820.chunk.css.map": "/PictureAlbum/static/css/main.48990820.chunk.css.map"
   }
 }
